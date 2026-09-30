@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skalgard — O fiorde</title>
+  <meta name="description" content="Conheça Skalgard, acompanhe as novidades do fiorde e baixe o jogo para Windows.">
+  <meta name="theme-color" content="#07111c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css?v=3">
+  <script>try{if(localStorage.getItem('sk-hour')==='day')document.documentElement.classList.add('day');}catch(e){}</script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <div class="world" aria-hidden="true">
+    <img class="is-day" src="assets/fjord-day.jpg" alt="">
+    <img class="is-night" src="assets/fjord-night.jpg" alt="">
+    <div class="water"></div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+  </div>
+  <canvas id="sparks" aria-hidden="true"></canvas>
+  <div id="glow" aria-hidden="true"></div>
+
+  <header class="top">
+    <a class="brand" href="#inicio"><img src="assets/logo.png" alt="Skalgard"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav id="menu">
+      <button type="button" data-view="inicio">Início</button>
+      <button type="button" data-view="mural">Mural</button>
+      <button type="button" data-view="baixar">Baixar</button>
+    </nav>
+    <button class="cycle" id="cycle" type="button" aria-pressed="false">Ver o dia</button>
+  </header>
+
+  <main id="conteudo">
+    <section id="view-inicio" class="view">
+      <div class="hero">
+        <div class="hero-copy">
+          <img class="hero-logo" src="assets/logo.png" alt="">
+          <h1>O fiorde abre as portas.</h1>
+          <p>A arena espera por você. Acompanhe as novidades do fiorde e prepare-se para a próxima batalha.</p>
+          <div class="hero-actions">
+            <button class="btn gold" type="button" data-view="mural">Explorar o mural</button>
+            <button class="btn ghost" type="button" data-view="baixar">Baixar o jogo</button>
+          </div>
+        </div>
+      </div>
+
+      <section class="home-news">
+        <div class="section-head">
+          <p class="kicker">Mural</p>
+          <h2>O que o fiorde andou fazendo</h2>
+        </div>
+        <div id="home-news" class="news-grid"></div>
+        <button class="btn ghost" type="button" data-view="mural">Abrir o mural</button>
+      </section>
+    </section>
+
+    <section id="view-mural" class="view" hidden>
+      <div class="page-head">
+        <p class="kicker">Novidades</p>
+        <h1>Mural do fiorde</h1>
+        <p>Novidades, atualizações e histórias do playtest.</p>
+      </div>
+      <div id="mural-list" class="timeline"></div>
+    </section>
+
+    <section id="view-baixar" class="view" hidden>
+      <div class="voyage">
+        <img class="voyage-crest" src="assets/shield.png" alt="">
+        <div class="voyage-copy">
+          <p class="kicker">Cais</p>
+          <h1>O dracar parte daqui</h1>
+          <p class="voyage-lead">Baixe o playtest, abra no Windows e prepare-se para entrar na arena.</p>
+          <div id="download-panel" class="download-panel"></div>
+        </div>
+        <ol class="voyage-steps">
+          <li>
+            <span>01</span>
+            <strong>Baixe o arquivo</strong>
+            <p>O botão de download leva ao arquivo do playtest.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <strong>Abra no Windows</strong>
+            <p>O arquivo cai na pasta de downloads deste computador.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <strong>Entre na arena</strong>
+            <p>Inicie o jogo e reúna seus guerreiros.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Skalgard · Terra dos Guerreiros</p>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/effects.js"></script>
+</body>
+</html>
