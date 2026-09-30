@@ -1,0 +1,6 @@
+Skalgard — site estático
+
+As instruções atualizadas estão no README.md desta pasta.
+Para visualizar: iniciar-site.bat e abrir http://127.0.0.1:8090/.
+Para publicar: usar public/ no GitHub Pages, conforme README.md.
+Notícias: public/news.json. Download: public/config.json.
